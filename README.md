@@ -68,7 +68,7 @@ To set up and run this project, you'll need the following installed on your mach
 ### Step 3: Run the AI Component
 
 1. **Install llama.cpp**:
-    The AI backend relies on the `llama.cpp` library to run a local large language model. Follow the instructions on the [llama.cpp GitHub repository](https://github.com/ggerganov/llama.cpp) to install it. For function calling , please refer to [llama.cpp agent GitHub repository]([https://github.com/ggerganov/llama.cpp](https://github.com/Maximilian-Winter/llama-cpp-agent)
+    The AI backend relies on the `llama.cpp` library to run a local large language model. Follow the instructions on the [llama.cpp GitHub repository](https://github.com/ggerganov/llama.cpp) to install it. For function calling , please refer to [llama.cpp-agent]([https://github.com/ggerganov/llama.cpp](https://github.com/Maximilian-Winter/llama-cpp-agent)
 
 2. **Navigate to the AI Component Folder**:
     The AI component is located in the root folder and can be run using the Python file `reactionfunction.py`.
