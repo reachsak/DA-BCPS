@@ -6,7 +6,7 @@ This project implements a decentralized governance framework for building facili
 
 - **Smart Contract**: The contract for decentralized governance is written in Solidity and can be deployed using [Brownie](https://eth-brownie.readthedocs.io/en/stable/).
 - **Frontend**: The React.js frontend interacts with the smart contract and includes a platform to visualize and manage DAO operations.
-- **AI Component**: A Python-based AI system (`reactionfunction.py`) that integrates with the React.js frontend to provide intelligent building operations and decision-making.
+- **AI Component**: A Python-based AI system (`reactionfunction.py`) integrates with the React.js frontend to provide intelligent building operations and decision-making, using [llama.cpp](https://github.com/ggerganov/llama.cpp) to run a local large language model.
 
 ## Prerequisites
 
@@ -15,6 +15,7 @@ To set up and run this project, you'll need the following installed on your mach
 - [Node.js](https://nodejs.org/en/download/) and npm (for the frontend)
 - [Python 3.8+](https://www.python.org/downloads/) (for the AI component)
 - [Brownie](https://eth-brownie.readthedocs.io/en/stable/install.html) (for deploying smart contracts)
+- [llama.cpp](https://github.com/ggerganov/llama.cpp) (for running the local large language model in the AI backend)
 
 ## Getting Started
 
@@ -66,22 +67,25 @@ To set up and run this project, you'll need the following installed on your mach
 
 ### Step 3: Run the AI Component
 
-1. **Navigate to the AI Component Folder**:
+1. **Install llama.cpp**:
+    The AI backend relies on the `llama.cpp` library to run a local large language model. Follow the instructions on the [llama.cpp GitHub repository](https://github.com/ggerganov/llama.cpp) to install it.
+
+2. **Navigate to the AI Component Folder**:
     The AI component is located in the root folder and can be run using the Python file `reactionfunction.py`.
 
-2. **Install Python Dependencies**:
+3. **Install Python Dependencies**:
     Ensure all necessary dependencies are installed. You can install them using:
     ```bash
     pip install -r requirements.txt
     ```
 
-3. **Run the AI Script**:
-    Once the dependencies are installed, run the AI component:
+4. **Run the AI Script**:
+    Once the dependencies are installed and `llama.cpp` is set up, run the AI component:
     ```bash
     python reactionfunction.py
     ```
 
-    This will start the AI backend, which will interact with the React frontend to enable smart building operations and decision-making capabilities.
+    This will start the AI backend, which will integrate with the React frontend to provide smart building operations and decision-making capabilities using a local large language model powered by `llama.cpp`.
 
 ### Step 4: Using the Platform
 
@@ -93,7 +97,7 @@ To set up and run this project, you'll need the following installed on your mach
 ## Additional Notes
 
 - **Smart Contract Interaction**: The React frontend has integrated wallet support (e.g., MetaMask) for interacting with the blockchain.
-- **AI Capabilities**: The AI backend uses large language models (LLMs) to provide conversational interfaces for smart building control. Ensure the `reactionfunction.py` script is running to enable these features in the frontend.
+- **AI Capabilities**: The AI backend uses [llama.cpp](https://github.com/ggerganov/llama.cpp) to run a local large language model that powers conversational interfaces for smart building control. Ensure the `reactionfunction.py` script is running to enable these features in the frontend.
 - **Testing on Local Blockchain**: If you're testing locally, you can deploy the contract on a local blockchain such as Ganache or Hardhat, and update the contract address accordingly in the frontend config file.
 
 ## License
