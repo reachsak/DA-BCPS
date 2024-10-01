@@ -87,6 +87,11 @@ To set up and run this project, you'll need the following installed on your mach
 
     This will start the AI backend, which will integrate with the React frontend to provide smart building operations and decision-making capabilities using a local large language model powered by `llama.cpp`.
 
+## Demo
+
+[![Watch the demo video](https://img.youtube.com/vi/9xEsGGWHDjI/0.jpg)](https://www.youtube.com/watch?v=9xEsGGWHDjI)  
+*Click on the image to view the video.*
+
 ### Step 4: Using the Platform
 
 - Once the contract is deployed, the frontend is running, and the AI backend is live, you can use the platform to:
