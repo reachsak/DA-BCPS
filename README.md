@@ -65,7 +65,7 @@ To set up and run this project, you'll need the following installed on your mach
     ```
     This will start the React application and open it in your browser at `http://localhost:3000`.
 
-### Step 3: Run the AI Component
+### Step 3: Run the AI Component (Tutorials coming soon)
 
 1. **Install llama.cpp**:
     The AI backend relies on the `llama.cpp` library to run a local large language model. Follow the instructions on the [llama.cpp GitHub repository](https://github.com/ggerganov/llama.cpp) to install it. For function calling , please refer to [llama-cpp-agent](https://github.com/Maximilian-Winter/llama-cpp-agent)
