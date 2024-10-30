@@ -1,4 +1,4 @@
-# Decentralized Autonomous Building Cyber-Physical System (DABCPS)
+# Decentralized Autonomous Building Cyber-Physical System (DA-BCPS)
 
 This project implements a decentralized governance framework for building facilities management using blockchain, a DAO (Decentralized Autonomous Organization), and an AI component for smart building operations. The system uses a smart contract for decentralized governance, a React-based frontend, and a Python AI platform that facilitates decision-making and automation.
 
