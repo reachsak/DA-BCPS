@@ -3,7 +3,8 @@
 This project implements a decentralized governance framework for building facilities management using blockchain, a DAO (Decentralized Autonomous Organization), and an AI component for smart building operations. The system uses a smart contract for decentralized governance, a React-based frontend, and a Python AI platform that facilitates decision-making and automation.
 
 ## Manuscript
-In preparation for submission to Automation in construction
+In preparation for submission to Automation in construction.
+
 Preprint available at [arXiv:2410.19262v1](https://arxiv.org/abs/2410.19262).
 
 ## Project Structure
