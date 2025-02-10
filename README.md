@@ -1,74 +1,115 @@
-# Build your own DAO from Scratch, Smart Contracts, Moralis API with Backend and Complete Frontend.
+# Decentralized Autonomous Building Cyber-Physical System (DA-BCPS)
 
-## Preparation
+This project implements a decentralized governance framework for building facilities management using blockchain, a DAO (Decentralized Autonomous Organization), and an AI component for smart building operations. The system uses a smart contract for decentralized governance, a React-based frontend, and a Python AI platform that facilitates decision-making and automation.
 
-Go to the frontend folder and install the dependencies with yarn
+## Manuscript
+In preparation for submission to Automation in construction.
 
-```shell
-    yarn
-```
+Preprint available at [arXiv:2410.19262v1](https://arxiv.org/abs/2410.19262).
 
-change the `.env.example` on the main directory and add your private keys for:
+## Project Structure
 
-- Wallet Private Key.
-- Infura Project ID.
-- Etherscan API key.
+- **Smart Contract**: The contract for decentralized governance is written in Solidity and can be deployed using [Brownie](https://eth-brownie.readthedocs.io/en/stable/).
+- **Frontend**: The React.js frontend interacts with the smart contract and includes a platform to visualize and manage DAO operations.
+- **AI Component**: A Python-based AI system (`reactionfunction.py`) integrates with the React.js frontend to provide intelligent building operations and decision-making, using [llama.cpp](https://github.com/ggerganov/llama.cpp) to run a local large language model.
 
-On the Backend folder inside "tokens" change the `.env.example` and add your Moralis Private key.
+## Prerequisites
 
-Install the python dependencies for the env:
+To set up and run this project, you'll need the following installed on your machine:
 
-- eth-brownie
-- django
-- web3
+- [Node.js](https://nodejs.org/en/download/) and npm (for the frontend)
+- [Python 3.8+](https://www.python.org/downloads/) (for the AI component)
+- [Brownie](https://eth-brownie.readthedocs.io/en/stable/install.html) (for deploying smart contracts)
+- [llama.cpp](https://github.com/ggerganov/llama.cpp) (for running the local large language model in the AI backend)
 
-## Usage
+## Getting Started
 
-Run the backend with python with.
+### Step 1: Deploy the Smart Contract
 
-````
+1. **Install Brownie** (if you haven't already):
+    ```bash
+    pip install eth-brownie
+    ```
 
-Run the frontend with npm.
+2. **Compile the Smart Contract**:
+    Navigate to the root folder of the project where the `contracts/` folder is located and run:
+    ```bash
+    brownie compile
+    ```
 
-```shell
-    npm start
-````
+3. **Deploy the Smart Contract**:
+    In the project, there's a `scripts/` folder that contains a script to deploy the contract. To deploy it, run:
+    ```bash
+    brownie run scripts/deploy.py --network <network-name>
+    ```
+    Replace `<network-name>` with the Ethereum network you're using (e.g., `mainnet`, `rinkeby`, or `development`).
 
-## add llamafile server
+4. **Save the Contract Address**:
+    Once the contract is deployed, note the contract address. You’ll need this to interact with it from the frontend.
 
-launch terminal
-cd llamafileold
+### Step 2: Set Up and Run the Frontend
 
-llava7b
-./llamafile-server-0.2.1 -m weight/llava-v1.5-7b-f16.gguf --mmproj weight/llava-v1.5-7b-mmproj-f16.gguf
+1. **Navigate to the Frontend Folder**:
+    ```bash
+    cd frontend
+    ```
 
-llama213b
-./llamafile-server-0.2.1 -m weight/llama-2-13b-chat.Q8_0.gguf
+2. **Install Dependencies**:
+    Run npm to install all the required dependencies for the frontend:
+    ```bash
+    npm install
+    ```
 
-sharegpt4v13b
-./llamafile-server-0.2.1 -m weight/ggml-model-Q4_K.gguf --mmproj weight/mmproj-model-f162.gguf
+3. **Configure the Smart Contract Address**:
+    Open `frontend/src/config.js` (or wherever your contract configuration is located) and update the contract address with the one you obtained after deploying the smart contract.
 
-llava13b
+4. **Run the Frontend**:
+    To start the frontend, use:
+    ```bash
+    npm run start
+    ```
+    This will start the React application and open it in your browser at `http://localhost:3000`.
 
-Function calling model Berkeley
-./llamafile-server-0.2.1 -m weight/gorilla-openfunctions-v2-q6_K.gguf
+### Step 3: Run the AI Component (Tutorials coming soon)
 
-Function calling model Herme
-./llamafile-server-0.2.1 -m weight/Hermes-2-Pro-Mistral-7B.Q8_0.gguf
+1. **Install llama.cpp**:
+    The AI backend relies on the `llama.cpp` library to run a local large language model. Follow the instructions on the [llama.cpp GitHub repository](https://github.com/ggerganov/llama.cpp) to install it. For function calling , please refer to [llama-cpp-agent](https://github.com/Maximilian-Winter/llama-cpp-agent)
 
-Function calling natural function
-./llamafile-server-0.2.1 -m weight/natural-functions.Q8_0.gguf
+2. **Navigate to the AI Component Folder**:
+    The AI component is located in the root folder and can be run using the Python file `reactionfunction.py`.
 
-## run python server
+3. **Install Python Dependencies**:
+    Ensure all necessary dependencies are installed. You can install them using:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-cd backend
-python3 server.py
-python3 servertext.py
+4. **Run the AI Script**:
+    Once the dependencies are installed and `llama.cpp` is set up, run the AI component:
+    ```bash
+    python reactionfunction.py
+    ```
 
-## run server js frontend
+    This will start the AI backend, which will integrate with the React frontend to provide smart building operations and decision-making capabilities using a local large language model powered by `llama.cpp`.
 
-cd frontend
-cd src
-cd components
-node serverllava.js
-node serverllavatext.js
+## Demo
+
+[![Watch the demo video](https://img.youtube.com/vi/9xEsGGWHDjI/0.jpg)](https://www.youtube.com/watch?v=9xEsGGWHDjI)  
+*Click on the image to view the video.*
+
+### Step 4: Using the Platform
+
+- Once the contract is deployed, the frontend is running, and the AI backend is live, you can use the platform to:
+    - Interact with the smart contract through the decentralized governance system.
+    - Propose and vote on facility management actions.
+    - Automate building operations using the AI component.
+
+## Additional Notes
+
+- **Smart Contract Interaction**: The React frontend has integrated wallet support (e.g., MetaMask) for interacting with the blockchain.
+- **AI Capabilities**: The AI backend uses [llama.cpp](https://github.com/ggerganov/llama.cpp) to run a local large language model that powers conversational interfaces for smart building control. Ensure the `reactionfunction.py` script is running to enable these features in the frontend.
+- **Testing on Local Blockchain**: If you're testing locally, you can deploy the contract on a local blockchain such as Ganache or Hardhat, and update the contract address accordingly in the frontend config file.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
