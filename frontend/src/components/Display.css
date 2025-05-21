@@ -130,6 +130,11 @@ input[type="text"]:focus {
   margin: 5px;
 }
 
+.message {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 .message.user {
   background-color: #f3f3f3;
 }
