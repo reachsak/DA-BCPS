@@ -86,7 +86,7 @@ To set up and run this project, you'll need the following installed on your mach
 2. **Navigate to the AI Component Folder**:
     The AI component is located in the root folder and can be run using the Python file `reactionfunction.py`.
    
-4. **Run the AI Script**:
+3. **Run the AI Script**:
     Once the dependencies are installed and `llama.cpp` is set up, run the AI component:
     ```bash
     python reactionfunction.py
