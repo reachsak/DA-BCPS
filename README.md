@@ -13,6 +13,9 @@ This project implements a decentralized governance framework for building facili
 ### Overview of Decentralized governance platform
 <img src="/dao.gif" style="float: left; margin-right: 20px; max-width: 200px;">
 
+### Digital building twin
+<img src="/study22.gif" style="float: left; margin-right: 20px; max-width: 200px;">
+
 
 
 ## Project Structure
