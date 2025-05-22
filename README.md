@@ -5,6 +5,11 @@ This project implements a decentralized governance framework for building facili
 ### Overview of the DA-BCPS
 <img src="/study41.gif" style="float: left; margin-right: 20px; max-width: 200px;">
 
+
+### Overview of LLM-based Virtual Assistant for smart home control and blockchain task
+<img src="/dao.gif" style="float: left; margin-right: 20px; max-width: 200px;">
+
+
 ### Overview of Decentralized governance platform
 <img src="/dao.gif" style="float: left; margin-right: 20px; max-width: 200px;">
 
